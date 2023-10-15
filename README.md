@@ -14,6 +14,7 @@ The first ever and the best python unofficial library written for the [Whatsapp 
 
 ## Table of Contents
 - [Introduction](#introduction)
+- [Acknowledgements](#acknowledgements)
 - [Prerequisites](#prerequisites)
 - [Whatsapp Cloud API Support](#whatsapp-cloud-api-support)
 - [Installation](#installation)
@@ -35,6 +36,15 @@ Key Features:
 - Set up a callback function to handle incoming messages
 - Easy-to-use and customizable and lot more!
 
+## Acknowledgements
+ - God first of all.
+ - [Whatsapp Cloud API](https://https://developers.facebook.com/docs/whatsapp/cloud-api/overview)
+
+## Authors
+
+- [@Akpojiyovwi Tega(Me)](https://www.github.com/t-ega)
+
+ 
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
@@ -181,6 +191,9 @@ For more details on available methods and usage, refer to the documentation(in p
 ## Help
 Currently this project is only maintained by me, I am looking forward to accepting pull requests. If you need help just open an issue
 I would try my best to attend to all issues. 
+
+## Inspiration
+This project was inspired by the [Whastpp Nodejs SDK](https://github.com/WhatsApp/WhatsApp-Nodejs-SDK). Furthermore it was also inspired by the [Python Telegram Bot wrapper](https://github.com/python-telegram-bot/python-telegram-bot)
 
 # Contributing
 Contributions are welcome! Please see the Contribution Guidelines for more information.You can also help by reporting bugs or feature requests.
