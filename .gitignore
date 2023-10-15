@@ -1,0 +1,51 @@
+# Python
+*.pyc
+__pycache__/
+venv/
+env/
+dist/
+build/
+
+# IDE/Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+*.komodotools
+*.kate-swp
+*~.nib
+*.swp
+*.swo
+*~
+.project
+.DS_Store
+Thumbs.db
+
+# Testing
+.coverage
+.tox/
+htmlcov/
+
+# Dependency Management
+pip-lock.txt
+pipenv.lock
+pyenv.lock
+
+# Distribution
+*.egg-info/
+*.egg
+*.whl
+
+# Compiled files
+*.pyd
+*.so
+*.dll
+*.exe
+
+# Miscellaneous
+*.bak
+*.tmp
+*.log
+*.tmp.*
+*.swp
