@@ -9,9 +9,9 @@ The first ever and the best python unofficial library written for the [Whatsapp 
 [![Python Version](https://img.shields.io/badge/Python-3.7.2|3.8|3.9|3.10-blue.svg)](https://www.python.org/)
 [![Pylint](https://github.com/t-ega/Whatsapp-Python-SDK/actions/workflows/pylint.yml/badge.svg)](https://github.com/t-ega/Whatsapp-Python-SDK/actions/workflows/pylint.yml)
 [![Libraries Used](https://img.shields.io/badge/Dependencies-requests%20%7C%20FastAPI%20|Uvicorn-blue)]()
-[![License](https://img.shields.io/badge/License-MIT-green)](https://link-to-license)
+[![License](https://img.shields.io/badge/License-GNU-green)](https://link-to-license)
 [![Maintainer](https://img.shields.io/badge/Maintainer-Akpojiyovwi%20Tega-blue)](https://github.com/t-ega)
-[![Documentation](https://img.shields.io/badge/Documentation-Link-blue)]()
+[![Documentation](https://img.shields.io/badge/Documentation-Link-blue)](https://github.com/t-ega/Whatsapp-Python-SDK/blob/main/LICENSE)
 
 ## Table of Contents
 - [Introduction](#introduction)
