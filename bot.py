@@ -5,7 +5,7 @@ from unicodedata import decimal
 import json
 import requests
 
-from _Exceptions.http_error import CustomHTTPError
+from _exceptions.http_error import CustomHTTPError
 from _base_api import _BaseApi
 from _files.Contact import Contact
 from _utils.json_serializer import MyEncoder
