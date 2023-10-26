@@ -1,4 +1,4 @@
-from .FileObject import File
+from .file_object import File
 
 """This module contains an object that represents a Whatsapp Image"""
 

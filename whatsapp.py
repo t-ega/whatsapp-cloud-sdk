@@ -11,9 +11,9 @@ from uvicorn import Config, Server
 from starlette.requests import Request
 from starlette.responses import Response
 
-from _files.Message import Message
+from _files.message import Message
 
-from _files.Contact import Contact, Name, Phone
+from _files.contact import Contact, Name, Phone
 from _validators.server import Webhook
 
 from bot import Bot

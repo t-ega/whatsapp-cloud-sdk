@@ -1,13 +1,13 @@
 import datetime
 from typing import Optional, Coroutine, List
 
-from _files.FileObject import File
+from _files.file_object import File
 from _utils.types import JSONDict, JSONExtract, MessageTypes
 from bot import Bot
-from _files.Image import Image
-from _files.Location import Location
-from _files.Reaction import Reaction
-from _files.Sticker import Sticker
+from _files.image import Image
+from _files.location import Location
+from _files.reaction import Reaction
+from _files.sticker import Sticker
 
 """This module contains an object that represents a Whatsapp Message"""
 

@@ -1,6 +1,6 @@
 from json import JSONEncoder
 
-from _files.FileObject import File
+from _files.file_object import File
 
 
 class MyEncoder(JSONEncoder):

@@ -13,11 +13,11 @@ __all__ = (
     "Bot",
 )
 
-from ._files.Message import Message
-from ._files.Contact import Contact
-from ._files.Image import Image
-from ._files.Sticker import Sticker
-from ._files.Location import Location
-from ._files.Reaction import Reaction
+from ._files.message import Message
+from ._files.contact import Contact
+from ._files.image import Image
+from ._files.sticker import Sticker
+from ._files.location import Location
+from ._files.reaction import Reaction
 from .whatsapp import Whatsapp
 from .bot import Bot

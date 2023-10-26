@@ -7,7 +7,7 @@ import requests
 
 from _exceptions.http_error import CustomHTTPError
 from _base_api import _BaseApi
-from _files.Contact import Contact
+from _files.contact import Contact
 from _utils.json_serializer import MyEncoder
 from _validators.messages import (
     TextMessage,

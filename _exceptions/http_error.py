@@ -13,7 +13,8 @@ class CustomHTTPError(Exception):
     """
     Represents a custom HTTP error.
 
-    This exception class is used to raise custom HTTP errors with specific status codes and response text.
+    This exception class is used to raise custom HTTP errors with
+    specific status codes and response text.
     It inherits from the base Exception class.
 
     Attributes:

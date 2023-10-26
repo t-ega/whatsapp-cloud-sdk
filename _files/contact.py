@@ -1,6 +1,8 @@
+"""This module contains an object that represents a Whatsapp Contact and it related details."""
+
 from typing import List, Optional, Union
 
-from _files.FileObject import File
+from _files.file_object import File
 from _utils.types import JSONDict
 
 from _validators.messages import (
@@ -12,10 +14,31 @@ from _validators.messages import (
     EmailValidator,
 )
 
-"""This module contains an object that represents a Whatsapp Contact and it related details."""
 
-
+# pylint: disable=too-few-public-methods
 class Address(File):
+    """
+    Represents a contact address.
+
+    Args:
+        street (str): The street address.
+        city (str): The city.
+        state (str): The state.
+        zip (str): The ZIP code.
+        country (str): The country.
+        country_code (str): The country code.
+        type (str): The type of address.
+
+    Attributes:
+        street (str): The street address.
+        city (str): The city.
+        state (str): The state.
+        zip (str): The ZIP code.
+        country (str): The country.
+        country_code (str): The country code.
+        type (str): The type of address.
+    """
+
     __slots__ = (
         "street",
         "city",
@@ -26,6 +49,8 @@ class Address(File):
         "type",
     )
 
+    # pylint: disable=too-many-arguments
+    # pylint: disable=redefined-builtin
     def __init__(
         self,
         street: str,
@@ -55,6 +80,18 @@ class Address(File):
 
 
 class Email(File):
+    """
+    Represents an email address.
+
+    Args:
+        email (str): The email address.
+        type (str): The type of email address.
+
+    Attributes:
+        email (str): The email address.
+        type (str): The type of email address.
+    """
+
     __slots__ = ("email", "type")
 
     def __init__(self, email: str, type: str):
@@ -64,6 +101,26 @@ class Email(File):
 
 
 class Name(File):
+    """
+    Represents a contact name.
+
+    Args:
+        formatted_name (str): The formatted name.
+        first_name (str): The first name.
+        last_name (str): The last name (optional).
+        middle_name (str): The middle name (optional).
+        suffix (str): The name suffix (optional).
+        prefix (str): The name prefix (optional).
+
+    Attributes:
+        formatted_name (str): The formatted name.
+        first_name (str): The first name.
+        last_name (str): The last name.
+        middle_name (str): The middle name.
+        suffix (str): The name suffix.
+        prefix (str): The name prefix.
+    """
+
     __slots__ = (
         "formatted_name",
         "first_name",
@@ -99,6 +156,20 @@ class Name(File):
 
 
 class Org(File):
+    """
+    Represents organizational information.
+
+    Args:
+        company (str): The company name.
+        department (str): The department.
+        title (str): The job title.
+
+    Attributes:
+        company (str): The company name.
+        department (str): The department.
+        title (str): The job title.
+    """
+
     __slots__ = ("company", "department", "title")
 
     def __init__(self, company: str, department: str, title: str):
@@ -109,6 +180,20 @@ class Org(File):
 
 
 class Phone(File):
+    """
+    Represents a Whatsapp message phone number.
+
+    Args:
+        phone (str): The phone number.
+        wa_id (str): The WhatsApp ID (optional).
+        type (str): The type of phone number (optional).
+
+    Attributes:
+        phone (str): The phone number.
+        wa_id (str): The WhatsApp ID.
+        type (str): The type of phone number.
+    """
+
     __slots__ = ("phone", "wa_id", "type")
 
     def __init__(self, phone: str, wa_id: str = None, type: str = None):
@@ -119,6 +204,18 @@ class Phone(File):
 
 
 class URL(File):
+    """
+    Represents a Whatsapp Message URL.
+
+    Args:
+        url (str): The URL.
+        type (str): The type of URL.
+
+    Attributes:
+        url (str): The URL.
+        type (str): The type of URL.
+    """
+
     __slots__ = ("url", "type")
 
     def __init__(self, url: str, type: str):
@@ -150,7 +247,8 @@ class Contact(File):
         urls (Optional[List[URL]]): A list of URLs.
 
     Methods:
-        - de_json(data: Optional[JSONDict]) -> Optional[Contact]: Create a Contact object from JSON data.
+        - de_json(data: Optional[JSONDict]) -> Optional[Contact]: Create a Contact
+        object from JSON data.
     """
 
     _id_attrs = ("name", "phones", "birthday")
@@ -175,6 +273,7 @@ class Contact(File):
         phones: Optional[Union[List[Phone], List[str]]] = None,
         urls: Optional[List[URL]] = None,
     ):
+        # pylint: disable=fixme
         # TODO: Allow validation using pydantic
 
         #  required
@@ -196,6 +295,7 @@ class Contact(File):
                         f"Phone {i} must either be a string or an instance of the Phone class!"
                     )
         else:
+            # pylint: disable=line-too-long
             raise ValueError(
                 f"Phones must be of type <class list> of phones class or strings!\nGot {type(phones)} instead "
             )
@@ -258,3 +358,6 @@ class Contact(File):
             phones=phones,
             urls=urls,
         )
+
+
+# pylint: enable=too-many-arguments
