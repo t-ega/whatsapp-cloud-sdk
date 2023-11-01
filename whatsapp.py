@@ -220,4 +220,3 @@ class Whatsapp:
 
         self.__server = server
         self.__server.run()
-

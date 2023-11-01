@@ -1,9 +1,9 @@
-from pydantic import BaseModel
-from typing import Callable
-
 """
 This file defines the Pydantic model used for validating a callback function
 """
+
+from typing import Callable
+from pydantic import BaseModel
 
 
 class Webhook(BaseModel):

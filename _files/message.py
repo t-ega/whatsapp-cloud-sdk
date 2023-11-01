@@ -255,7 +255,7 @@ class Message(File):
         if message_type and message_type in MessageTypes.__members__:
             output_dict["_type"] = MessageTypes[message_type]
         else:
-            output_dict["_type"] = MessageTypes.unknown
+            output_dict["_type"] = MessageTypes.UNKNOWN
 
         output_dict["business_id"] = output_dict.get("id")
         output_dict["display_phone_number"] = output_dict.get("display_phone_number")

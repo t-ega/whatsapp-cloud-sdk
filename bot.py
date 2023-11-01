@@ -489,7 +489,7 @@ class Bot(_BaseApi):
         except requests.HTTPError as exc:
             # Re raise the error with the text gotten
             raise CustomHTTPError(
-                status_code=response.status_code, response_text=response.text
+                status_code=response.status_code, response_text=response.TEXT
             ) from exc
 
         return response.json()
