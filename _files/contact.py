@@ -15,6 +15,7 @@ from _validators.messages import (
 )
 
 
+# pylint: disable=redefined-builtin
 # pylint: disable=too-few-public-methods
 class Address(File):
     """
@@ -130,6 +131,7 @@ class Name(File):
         "prefix",
     )
 
+    # pylint: disable=too-many-arguments
     def __init__(
         self,
         formatted_name: str,
@@ -308,8 +310,13 @@ class Contact(File):
         self.phones = phones
         self.urls = urls
 
+    # pylint: disable=too-many-locals
     @classmethod
     def de_json(cls, data: Optional[JSONDict]) -> Optional["Contact"]:
+        """This class acts as a method for extracting and converting JSON data gotten from
+        Whatsapp Cloud API and converting them into internal objects that can be interacted with
+        """
+
         data = cls.parse_data(data)
 
         if not data:

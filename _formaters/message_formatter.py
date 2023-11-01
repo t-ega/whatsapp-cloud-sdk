@@ -1,10 +1,3 @@
-from typing import List, Optional
-
-from unicodedata import decimal
-
-from _utils.types import JSONDict
-from _validators.messages import ButtonContents
-
 """This module contains custom formatting class and aliases for internal use within the library.
 
 Warning:
@@ -12,6 +5,13 @@ Warning:
     user. Changes to this module are not considered breaking changes and may not be documented in
     the changelog.
 """
+
+from typing import List, Optional
+
+from unicodedata import decimal
+
+from _utils.types import JSONDict
+from _validators.messages import ButtonContents
 
 
 class LinkTypes:

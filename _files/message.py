@@ -13,6 +13,8 @@ from _files.sticker import Sticker
 
 
 class Message(File):
+    """Represents an actual message instance"""
+
     __slots__ = (
         "business_id",
         "display_phone_number",
@@ -47,6 +49,24 @@ class Message(File):
         location: Optional[Location] = None,
         bot: Bot = None,
     ):
+        """
+        Initialize a Message instance.
+
+        Args:
+            business_id (Optional[int]): The business ID associated with the message.
+            display_phone_number (Optional[str]): The phone number to display.
+            phone_number_id (Optional[int]): The ID of the phone number.
+            from_user (Optional[str]): The sender of the message.
+            _id (Optional[str]): The ID of the message.
+            time (Optional[str]): The timestamp of the message.
+            text (Optional[str]): The text of the message.
+            _type (Optional[MessageTypes]): The type of the message.
+            reaction (Optional[Reaction]): The reaction to the message.
+            image (Optional[Image]): The image associated with the message.
+            sticker (Optional[Sticker]): The sticker associated with the message.
+            location (Optional[Location]): The location associated with the message.
+            bot (Bot): The associated Bot instance.
+        """
         # required
         self.id = _id
         # optional
@@ -64,11 +84,26 @@ class Message(File):
         self.__bot = bot
 
     async def reply_text(self, text: str) -> Coroutine:
+        """
+        Reply to the message with text.
+
+        Args:
+            text (str): The text to send in the reply.
+
+        Returns:
+            Coroutine: A response coroutine from the WhatsApp Cloud API.
+        """
         return await self.get_bot().send_text(
             text=text, message_id=self.id, recipient_number=self.from_user
         )
 
     def get_bot(self) -> Optional[Bot]:
+        """
+        Get the associated Bot instance.
+
+        Returns:
+            Optional[Bot]: The associated Bot instance or None.
+        """
         if not self.__bot:
             raise RuntimeError("Bot is not available")
         return self.__bot
@@ -76,6 +111,16 @@ class Message(File):
     async def reply_with_image_link(
         self, link: str, caption: Optional[str] = None
     ) -> Coroutine:
+        """
+        Reply to the message with an image from a URL.
+
+        Args:
+            link (str): The URL of the image.
+            caption (Optional[str]): The caption for the image.
+
+        Returns:
+            Coroutine: A response coroutine from the WhatsApp Cloud API.
+        """
         return await self.get_bot().send_image_by_url(
             link=link,
             recipient_number=self.from_user,
@@ -84,6 +129,15 @@ class Message(File):
         )
 
     async def reply_with_audio_link(self, link: str) -> Coroutine:
+        """
+        Reply to the message with audio from a URL.
+
+        Args:
+            link (str): The URL of the audio.
+
+        Returns:
+            Coroutine: A response coroutine from the WhatsApp Cloud API.
+        """
         return await self.get_bot().send_audio_by_url(
             link=link,
             recipient_number=self.from_user,
@@ -93,6 +147,16 @@ class Message(File):
     async def reply_with_document_link(
         self, link: str, caption: Optional[str]
     ) -> Coroutine:
+        """
+        Reply to the message with a document from a URL.
+
+        Args:
+            link (str): The URL of the document.
+            caption (Optional[str]): The caption for the document.
+
+        Returns:
+            Coroutine: A response coroutine from the WhatsApp Cloud API.
+        """
         return await self.get_bot().send_document_by_url(
             link=link,
             caption=caption,
@@ -101,6 +165,15 @@ class Message(File):
         )
 
     async def reply_with_sticker_link(self, link: str) -> Coroutine:
+        """
+        Reply to the message with a sticker from a URL.
+
+        Args:
+            link (str): The URL of the sticker.
+
+        Returns:
+            Coroutine: A response coroutine from the WhatsApp Cloud API.
+        """
         return await self.get_bot().send_sticker_with_url(
             link=link, recipient_number=self.from_user, message_id=self.id
         )
@@ -108,6 +181,16 @@ class Message(File):
     async def reply_with_video_link(
         self, link: str, caption: Optional[str] = None
     ) -> Coroutine:
+        """
+        Reply to the message with a video from a URL.
+
+        Args:
+            link (str): The URL of the video.
+            caption (Optional[str]): The caption for the video.
+
+        Returns:
+            Coroutine: A response coroutine from the WhatsApp Cloud API.
+        """
         return await self.get_bot().send_video_by_url(
             link=link,
             recipient_number=self.from_user,
@@ -118,10 +201,26 @@ class Message(File):
     async def mark_message_as_read(
         self,
     ) -> Coroutine:
+        """
+        Mark the message as read.
+
+        Returns:
+            Coroutine: A response coroutine from the WhatsApp Cloud API.
+        """
         return await self.get_bot().mark_message_as_read(message_id=self.id)
 
     @classmethod
     def de_json(cls, data: Optional[JSONDict], bot: Bot) -> Optional["Message"]:
+        """
+        Deserialize JSON data into a Message instance.
+
+        Args:
+            data (Optional[JSONDict]): The JSON data to deserialize.
+            bot (Bot): The associated Bot instance.
+
+        Returns:
+            Optional[Message]: The deserialized Message instance or None.
+        """
         data: JSONDict = data.copy().get("entry")[0]
         data: JSONDict = data.get("changes")[0]
         data: JSONDict = data.get("value")
@@ -173,6 +272,12 @@ class Message(File):
         return cls(bot=bot, **output_dict)
 
     def __str__(self):
+        """
+        Convert the Message instance to a string representation.
+
+        Returns:
+            str
+        """
         attributes = {}
         for attr in self._id_attrs:
             attributes[attr] = getattr(self, attr)

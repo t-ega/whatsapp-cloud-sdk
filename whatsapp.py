@@ -221,24 +221,3 @@ class Whatsapp:
         self.__server = server
         self.__server.run()
 
-
-w = Whatsapp()
-
-
-async def k(request: Request, message: Message):
-    c = Contact(
-        name=Name(
-            first_name="Tega",
-            formatted_name="Tega",
-        ),
-        phones=[Phone(phone="2349014471129")],
-    )
-
-    await message.get_bot().send_contact(
-        contacts=[c],
-        recipient_number=message.from_user,
-    )
-
-
-w.run_server(callback=k, verify_token="ver")
-w.bot.send_audio_by_url()

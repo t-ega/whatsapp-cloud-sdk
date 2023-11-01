@@ -4,9 +4,19 @@ from _files.file_object import File
 
 
 class Sticker(File):
+    """Represents a WhatsApp sticker."""
+
     __slots__ = ("mime_type", "sha256", "id")
 
     def __init__(self, mime_type: str, sha256: str, id: str):
+        """
+        Initialize a Sticker instance.
+
+        Args:
+            mime_type (str): The MIME type of the sticker.
+            sha256 (str): The SHA256 hash of the sticker.
+            id (str): The unique ID associated with the sticker.
+        """
         self.id = id
         self.sha256 = sha256
         self.mime_type = mime_type
