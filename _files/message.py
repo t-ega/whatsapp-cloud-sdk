@@ -1,20 +1,21 @@
+"""This module contains an object that represents a Whatsapp Message"""
+
 import datetime
 from typing import Optional, Coroutine, List
 
 from _files.file_object import File
+from _files.image import Image
 from _utils.types import JSONDict, JSONExtract, MessageTypes
 from bot import Bot
-from _files.image import Image
 from _files.location import Location
 from _files.reaction import Reaction
 from _files.sticker import Sticker
-
-"""This module contains an object that represents a Whatsapp Message"""
 
 
 class Message(File):
     """Represents an actual message instance"""
 
+    # pylint: disable=too-many-instance-attributes
     __slots__ = (
         "business_id",
         "display_phone_number",
@@ -33,6 +34,7 @@ class Message(File):
 
     _id_attrs = ("id", "from_user", "type", "time")
 
+    # pylint: disable=too-many-arguments
     def __init__(
         self,
         business_id: Optional[int] = None,

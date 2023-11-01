@@ -1,6 +1,7 @@
-from .file_object import File
-
 """This module contains an object that represents a Whatsapp Image"""
+
+
+from .file_object import File
 
 
 class Image(File):
@@ -17,8 +18,8 @@ class Image(File):
         """
 
         :param caption: the caption for the image
-        :param mime_type(optional):the specific image format or file extension. Here are some common MIME types for
-         popular image formats:
+        :param mime_type(optional):the specific image format or file extension. Here are some common
+        MIME types for popular image formats:
             JPEG image: image/jpeg
             PNG image: image/png
             GIF image: image/gif

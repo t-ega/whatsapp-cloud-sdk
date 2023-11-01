@@ -265,6 +265,7 @@ class Contact(File):
         "urls",
     )
 
+    # pylint: disable=too-many-arguments
     def __init__(
         self,
         name: Union[Name, str],

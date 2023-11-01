@@ -43,7 +43,8 @@ class MessageFormatter:
         - format_link_message(to: str, link: str, m_type: LinkTypes, caption: str = "",
          message_id: str =None
         -> JSONDict:
-        - format_send_document_by_url(to: str, document_link: str, caption: str, is_reply: bool = False,
+        - format_send_document_by_url(to: str, document_link: str, caption: str,
+        is_reply: bool = False,
          message_id: str = None) -> JSONDict:
         - format_location_message(to: str, latitude: decimal, longitude: int, name: str,
         address: str,
@@ -123,7 +124,7 @@ class MessageFormatter:
         if message_id:
             message["context"] = {"message_id": message_id}
 
-            return message
+        return message
 
     @staticmethod
     def format_reply_with_reaction(
@@ -226,6 +227,7 @@ class MessageFormatter:
 
         return message
 
+    # pylint: disable=too-many-arguments
     @staticmethod
     def format_location_message(
         to: str,

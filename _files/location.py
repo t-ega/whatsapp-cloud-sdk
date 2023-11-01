@@ -1,8 +1,10 @@
-from _files.file_object import File
-
 """This module contains an object that represents a Whatsapp Location"""
 
 
+from _files.file_object import File
+
+
+# pylint: disable=too-few-public-methods
 class Location(File):
     """
     Represents a Location object

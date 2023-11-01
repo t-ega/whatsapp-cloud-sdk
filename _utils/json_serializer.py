@@ -7,7 +7,8 @@ from _files.file_object import File
 class MyEncoder(JSONEncoder):
     """Custom JSON encoder for serializing File objects e.g. Message, Audio, Video e.t.c.
 
-    This encoder is used to customize the serialization behavior when converting objects to JSON format.
+    This encoder is used to customize the serialization behavior when converting objects
+    to JSON format.
 
     Attributes:
         None
@@ -26,7 +27,8 @@ class MyEncoder(JSONEncoder):
         """Serialize an object to a JSON-serializable format.
 
         This method is called for objects that are not natively serializable by the JSON encoder.
-        It checks if the object is an instance of the File class and calls it's to_dict() method for serialization.
+        It checks if the object is an instance of the File class and calls it's to_dict()
+         method for serialization.
 
         Args:
             o: The object to be serialized.
