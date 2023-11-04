@@ -11,12 +11,11 @@ from uvicorn import Config, Server
 from starlette.requests import Request
 from starlette.responses import Response
 
-from _files.message import Message
+from whatsapp._files.message import Message
 
-from _files.contact import Contact, Name, Phone
-from _validators.server import Webhook
+from whatsapp._validators.server import Webhook
 
-from bot import Bot
+from whatsapp.bot import Bot
 
 
 load_dotenv()
