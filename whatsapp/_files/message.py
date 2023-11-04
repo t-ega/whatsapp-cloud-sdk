@@ -3,13 +3,13 @@
 import datetime
 from typing import Optional, Coroutine, List
 
-from _files.file_object import File
-from _files.image import Image
+from .file_object import File
+from .image import Image
 from _utils.types import JSONDict, JSONExtract, MessageTypes
-from bot import Bot
 from _files.location import Location
 from _files.reaction import Reaction
 from _files.sticker import Sticker
+from bot import Bot
 
 
 class Message(File):

@@ -10,6 +10,7 @@ class Sticker(File):
 
     __slots__ = ("mime_type", "sha256", "id")
 
+    # pylint: disable=redefined-builtin
     def __init__(self, mime_type: str, sha256: str, id: str):
         """
         Initialize a Sticker instance.

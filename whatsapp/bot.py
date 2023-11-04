@@ -5,11 +5,11 @@ from unicodedata import decimal
 import json
 import requests
 
-from _exceptions.http_error import CustomHTTPError
-from _base_api import _BaseApi
-from _files.contact import Contact
-from _utils.json_serializer import MyEncoder
-from _validators.messages import (
+from ._exceptions.http_error import CustomHTTPError
+from ._base_api import _BaseApi
+from ._files.contact import Contact
+from ._utils.json_serializer import MyEncoder
+from ._validators.messages import (
     TextMessage,
     ButtonMessage,
     ButtonContents,

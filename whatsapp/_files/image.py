@@ -1,7 +1,7 @@
 """This module contains an object that represents a Whatsapp Image"""
 
 
-from .file_object import File
+from whatsapp._files.file_object import File
 
 
 class Image(File):
