@@ -3,9 +3,9 @@
 import datetime
 from typing import Optional, Coroutine, List
 
-from .file_object import File
-from .image import Image
 from whatsapp._utils.types import JSONDict, JSONExtract, MessageTypes
+from whatsapp._files.file_object import File
+from whatsapp._files.image import Image
 from whatsapp._files.location import Location
 from whatsapp._files.reaction import Reaction
 from whatsapp._files.sticker import Sticker
