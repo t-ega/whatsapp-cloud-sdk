@@ -190,6 +190,7 @@ class Bot(_BaseApi):
 
         return await self.__send(data=payload)
 
+    # pylint: disable=fixme
     # TODO: Add input validation for all bot methods
 
     async def send_reaction_message(

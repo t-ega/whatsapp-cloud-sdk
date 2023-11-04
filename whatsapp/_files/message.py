@@ -266,10 +266,10 @@ class Message(File):
         output_dict["_id"] = messages.get("id")
         output_dict["time"] = time
         output_dict["text"] = text and text.get("body") or None
-        output_dict["reaction"] = reaction and Reaction(**reaction) or None
-        output_dict["image"] = image and Image(**image) or None
-        output_dict["sticker"] = sticker and Sticker(**sticker) or None
-        output_dict["location"] = location and Location(**location) or None
+        output_dict["reaction"] = (Reaction(**reaction) if reaction else None)
+        output_dict["image"] = (Image(**image) if image else None)
+        output_dict["sticker"] = (Sticker(**sticker) if sticker else None)
+        output_dict["location"] = (Location(**location) if location else None)
 
         return cls(bot=bot, **output_dict)
 
