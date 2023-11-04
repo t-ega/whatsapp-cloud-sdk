@@ -1,7 +1,7 @@
 """This module contains an object that represents a Whatsapp Sticker"""
 
 
-from _files.file_object import File
+from whatsapp._files.file_object import File
 
 
 # pylint: disable=too-few-public-methods

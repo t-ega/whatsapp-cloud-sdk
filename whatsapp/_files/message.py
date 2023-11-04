@@ -5,11 +5,11 @@ from typing import Optional, Coroutine, List
 
 from .file_object import File
 from .image import Image
-from _utils.types import JSONDict, JSONExtract, MessageTypes
-from _files.location import Location
-from _files.reaction import Reaction
-from _files.sticker import Sticker
-from bot import Bot
+from whatsapp._utils.types import JSONDict, JSONExtract, MessageTypes
+from whatsapp._files.location import Location
+from whatsapp._files.reaction import Reaction
+from whatsapp._files.sticker import Sticker
+from whatsapp.bot import Bot
 
 
 class Message(File):
