@@ -83,11 +83,18 @@ Before you begin, ensure you have met the following requirements:
 - send reply with a text
 
 ## Installation
-
-Use `pip` to install the WhatsApp Python SDK:
+You can install or upgrade `whatsapp-cloud-sdk` via:
 
 ```bash
-$ pip install whatsapp-cloud-sdk
+$ pip install whatsapp-cloud-sdk --upgrade
+```
+
+You can also install directly from the repo, though this is usually not necessary.
+```bash
+$ git clone https://github.com/t-ega/whatsapp-cloud-sdk
+$ cd whatsapp-cloud-sdk
+$ pip install poetry
+$ poetry install
 ```
 
 ## Getting Started
