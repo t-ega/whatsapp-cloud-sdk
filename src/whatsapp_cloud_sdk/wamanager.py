@@ -11,9 +11,9 @@ from uvicorn import Config, Server
 from starlette.requests import Request
 from starlette.responses import Response
 
-from whatsapp_tega._files.message import Message
+from src.whatsapp_cloud_sdk._files.message import Message
 
-from whatsapp_tega._validators.server import Webhook
+from src.whatsapp_cloud_sdk._validators.server import Webhook
 
 from whatsapp_tega.bot import Bot
 

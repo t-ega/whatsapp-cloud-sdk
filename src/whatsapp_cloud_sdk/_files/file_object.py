@@ -4,7 +4,7 @@ Other file objects would inherit from this."""
 from typing import Optional
 from warnings import warn
 
-from whatsapp_tega._utils.types import JSONDict
+from src.whatsapp_cloud_sdk._utils.types import JSONDict
 
 
 class File:

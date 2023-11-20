@@ -1,7 +1,7 @@
 """This module contains an object that represents a Whatsapp Reaction"""
 
 
-from whatsapp_tega._files.file_object import File
+from src.whatsapp_cloud_sdk._files.file_object import File
 
 
 # pylint: disable=too-few-public-methods

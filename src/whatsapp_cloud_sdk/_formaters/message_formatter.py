@@ -10,8 +10,8 @@ from typing import List, Optional
 
 from unicodedata import decimal
 
-from whatsapp_tega._utils.types import JSONDict
-from whatsapp_tega._validators.messages import ButtonContents
+from src.whatsapp_cloud_sdk._utils.types import JSONDict
+from src.whatsapp_cloud_sdk._validators.messages import ButtonContents
 
 
 class LinkTypes(Enum):

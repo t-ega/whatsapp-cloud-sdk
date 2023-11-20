@@ -2,7 +2,7 @@
 This file defines the Pydantic model used for validating a callback function
 """
 from typing import Callable
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 
 class Webhook(BaseModel):
@@ -33,5 +33,3 @@ class Webhook(BaseModel):
     callback: Callable
     webhook_url: str = '/webhook'
     port: int = 8000
-
-
