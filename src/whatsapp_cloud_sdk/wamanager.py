@@ -11,21 +11,21 @@ from uvicorn import Config, Server
 from starlette.requests import Request
 from starlette.responses import Response
 
-from whatsapp._files.message import Message
+from whatsapp_tega._files.message import Message
 
-from whatsapp._validators.server import Webhook
+from whatsapp_tega._validators.server import Webhook
 
-from whatsapp.bot import Bot
+from whatsapp_tega.bot import Bot
 
 
 load_dotenv()
 
 
-class Whatsapp:
+class WAManager:
     # pylint: disable=line-too-long
 
     """
-    Represents a WhatsApp bot manager that provides an entry point for external
+    Represents a WhatsApp bot server that provides an entry point for external
      users to interact with the WhatsApp API.
 
     Args:
@@ -102,8 +102,7 @@ class Whatsapp:
         Args:
             callback (Callable[[[Message]], None]): The callback function to handle incoming messages.
         """
-        validator = Webhook(callback=callback)
-        self.__callback_func: Callable = validator.callback
+        self.__callback_func: Callable = callback
 
     async def __handler(self, request: Request):
         """
@@ -167,6 +166,7 @@ class Whatsapp:
 
         Raises:
             RuntimeError: If the callback function or verify token is not provided.
+            RuntimeError: If the verify token is not present in the .env file
 
         Example:
 
@@ -177,16 +177,18 @@ class Whatsapp:
         )
 
         """
-
         if not verify_token:
             verify_token = os.getenv("WA_VERIFY_TOKEN")
 
-        if not isinstance(callback, Callable):
-            raise RuntimeError("A callback function is expected to be passed!")
+        validator = Webhook(callback=callback, port=port, webhook_url=webhook_url)
+        webhook_url = validator.webhook_url
+        port = validator.port
+        callback = validator.callback
 
         if not verify_token:
             raise RuntimeError(
-                "Either configure verify token in env file like this: WA_VERIFY_TOKEN or pass it as an argument!"
+                "Either configure your verify token in env file like this: `WA_VERIFY_TOKEN=tokenvalue`"
+                " or pass it as an argument to the run_server method!"
             )
 
         self.verify_token = verify_token

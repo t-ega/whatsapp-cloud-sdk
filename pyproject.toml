@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "whatsapp-cloud-sdk"
+version = "1.0.0"
+dependencies = [
+    "annotated-types==0.5.0",
+    "anyio==3.7.1",
+    "astroid==3.0.0",
+    "certifi==2023.7.22",
+    "charset-normalizer==3.3.0",
+    "click==8.1.7",
+    "colorama==0.4.6",
+    "dill==0.3.7",
+    "exceptiongroup==1.1.3",
+    "fastapi==0.103.2",
+    "h11==0.14.0",
+    "idna==3.4",
+    "isort==5.12.0",
+    "mccabe==0.7.0",
+    "platformdirs==3.11.0",
+    "pydantic==2.4.2",
+    "pydantic_core==2.10.1",
+    "pylint==3.0.1",
+    "python-dotenv==1.0.0",
+    "requests==2.31.0",
+    "sniffio==1.3.0",
+    "starlette==0.27.0",
+    "tomli==2.0.1",
+    "tomlkit==0.12.1",
+    "typing_extensions==4.8.0",
+    "urllib3==2.0.6",
+    "uvicorn==0.23.2",
+]
+
+requires-python = ">=3.6"
+
+authors = [
+  {name = "Akpojiyovwi Tega", email = "beniyoke@gmail.com"},
+]
+maintainers = [
+  {name = "Akpojiyovwi Tega", email = "beniyoke@gmail.com"}
+]
+
+description = "A library(SDK) that provides a Python interface to the Whatsapp Cloud API"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["whatsapp", "whatsapp-bot", "sdk-python", " whatsapp-api"]
+
+classifiers=[
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+
+
+[project.urls]
+Homepage = "https://github.com/t-ega/Whatsapp-Python-SDK/"
+Repository = "https://github.com/t-ega/Whatsapp-Python-SDK/"

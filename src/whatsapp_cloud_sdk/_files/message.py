@@ -3,13 +3,13 @@
 import datetime
 from typing import Optional, Coroutine, List
 
-from whatsapp._utils.types import JSONDict, JSONExtract, MessageTypes
-from whatsapp._files.file_object import File
-from whatsapp._files.image import Image
-from whatsapp._files.location import Location
-from whatsapp._files.reaction import Reaction
-from whatsapp._files.sticker import Sticker
-from whatsapp.bot import Bot
+from whatsapp_tega._utils.types import JSONDict, JSONExtract, MessageTypes
+from whatsapp_tega._files.file_object import File
+from whatsapp_tega._files.image import Image
+from whatsapp_tega._files.location import Location
+from whatsapp_tega._files.reaction import Reaction
+from whatsapp_tega._files.sticker import Sticker
+from whatsapp_tega.bot import Bot
 
 
 class Message(File):

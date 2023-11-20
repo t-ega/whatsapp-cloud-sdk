@@ -9,7 +9,7 @@ __all__ = (
     "Reaction",
     "Sticker",
     "Location",
-    "Whatsapp",
+    "WAManager",
     "Bot",
 )
 
@@ -19,5 +19,5 @@ from ._files.image import Image
 from ._files.sticker import Sticker
 from ._files.location import Location
 from ._files.reaction import Reaction
-from .whatsapp import Whatsapp
+from .wamanager import WAManager
 from .bot import Bot

@@ -5,11 +5,11 @@ from unicodedata import decimal
 import json
 import requests
 
-from whatsapp._exceptions.http_error import CustomHTTPError
-from whatsapp._base_api import _BaseApi
-from whatsapp._files.contact import Contact
-from whatsapp._utils.json_serializer import MyEncoder
-from whatsapp._validators.messages import (
+from whatsapp_tega._exceptions.http_error import CustomHTTPError
+from whatsapp_tega._base_api import _BaseApi
+from whatsapp_tega._files.contact import Contact
+from whatsapp_tega._utils.json_serializer import MyEncoder
+from whatsapp_tega._validators.messages import (
     TextMessage,
     ButtonMessage,
     ButtonContents,
@@ -17,9 +17,7 @@ from whatsapp._validators.messages import (
     LocationMessage,
 )
 
-from whatsapp._formaters.message_formatter import MessageFormatter, LinkTypes
-
-
+from whatsapp_tega._formaters.message_formatter import MessageFormatter, LinkTypes
 formatter = MessageFormatter()
 
 

@@ -2,10 +2,10 @@
 
 from typing import List, Optional, Union
 
-from whatsapp._files.file_object import File
-from whatsapp._utils.types import JSONDict
+from whatsapp_tega._files.file_object import File
+from whatsapp_tega._utils.types import JSONDict
 
-from whatsapp._validators.messages import (
+from whatsapp_tega._validators.messages import (
     AddressValidator,
     NameValidator,
     PhoneValidator,

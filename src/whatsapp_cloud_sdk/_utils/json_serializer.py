@@ -1,7 +1,7 @@
 """This module represents the Custom JSON encoder class for serializing CLASS OBJECTS"""
 from json import JSONEncoder
 
-from whatsapp._files.file_object import File
+from whatsapp_tega._files.file_object import File
 
 
 class MyEncoder(JSONEncoder):

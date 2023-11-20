@@ -37,6 +37,7 @@ Key Features:
 - Set up a callback function to handle incoming messages
 - Easy-to-use and customizable and lot more!
 
+
 ## Acknowledgements
  - God first of all.
  - [Whatsapp Cloud API](https://https://developers.facebook.com/docs/whatsapp/cloud-api/overview)
@@ -86,7 +87,7 @@ Before you begin, ensure you have met the following requirements:
 Use `pip` to install the WhatsApp Python SDK:
 
 ```bash
-$ pip install whatsapp-python-sdk
+$ pip install whatsapp-cloud-sdk
 ```
 
 ## Getting Started
@@ -106,20 +107,21 @@ Otherwise you would need to pass it as an argument to the `whatsapp` class.
 
 ```python
 
-from whatsapp import Whatsapp
-from whatsapp import Bot
-
+from whatsapp_cloud_sdk import WAManager
+from whatsapp_cloud_sdk import Bot
 
 # Create a WhatsApp manager instance
 
-whatsapp = Whatsapp(cloud_api_access_token="your_access_token", wa_phone_number_id="your_phone_number_id", version="v17.0")
+whatsapp = WAManager(cloud_api_access_token="your_access_token", wa_phone_number_id="your_phone_number_id",
+                     version="v17.0")
+
 
 # Set up a callback function to handle incoming messages:
 
 # **NOTE: The callback function must be an asynchronous function!**
 
- async def handle_message(request: Request, message:Message):
-     print(message.type)
+async def handle_message(request: Request, message: Message):
+    print(message.type)
 ```
 
 Start the FastAPI server to handle incoming webhooks:
@@ -201,3 +203,9 @@ Contributions are welcome! Please see the Contribution Guidelines for more infor
 
 # License
 You may copy, distribute and modify the software provided that modifications are described and licensed for free under LGPL-3. Derivatives works (including modifications or anything statically linked to the library) can only be redistributed under LGPL-3, but applications that use the library don't have to be.
+
+# Disclaimer
+This module is not officially affiliated with WhatsApp or Facebook. It's an independent project developed by the community.
+
+Note:
+For more detailed information about the methods and classes provided by the whatsapp-cloud-api module, refer to the module's source code or docstrings.
