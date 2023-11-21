@@ -1,6 +1,7 @@
 # WhatsApp Python SDK
 
-The first ever and the best python unofficial library written for the [Whatsapp Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api/overview)
+Your go-to wrapper for simplifying WhatsApp Cloud API integration. 
+The best python unofficial library written for the [Whatsapp Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api/overview)
 
 <img src="https://res.cloudinary.com/dkhelyskt/image/upload/v1697411070/whatsapp_logo_insxtu.png" alt="Whatsapp Logo" width="120" height="120">
 
