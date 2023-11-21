@@ -54,8 +54,8 @@ Before you begin, ensure you have met the following requirements:
 - Python 3.7+
 - [FastAPI](https://fastapi.tiangolo.com/)
 - [uvicorn](https://www.uvicorn.org/)
-- WhatsApp API Cloud Access Token (obtained from WhatsApp)
-- Basic understanding of how the Whatsapp API works
+- [WhatsApp API Cloud Access Token](https://developers.facebook.com/docs/whatsapp/cloud-api/get-started) (obtained from WhatsApp)
+- Basic understanding of how the [Whatsapp API](https://developers.facebook.com/docs/whatsapp/cloud-api/reference/messages) works
 
 ## Whatsapp Cloud API Support
 
