@@ -41,7 +41,7 @@ Key Features:
 
 ## Acknowledgements
  - God first of all.
- - [Whatsapp Cloud API](https://https://developers.facebook.com/docs/whatsapp/cloud-api/overview)
+ - [Whatsapp Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api/overview)
 
 ## Authors
 
