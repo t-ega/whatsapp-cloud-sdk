@@ -2,10 +2,10 @@
 
 from typing import List, Optional, Union
 
-from src.whatsapp_cloud_sdk._files.file_object import File
-from src.whatsapp_cloud_sdk._utils.types import JSONDict
+from whatsapp_cloud_sdk._files.file_object import File
+from whatsapp_cloud_sdk._utils.types import JSONDict
 
-from src.whatsapp_cloud_sdk._validators.messages import (
+from whatsapp_cloud_sdk._validators.messages import (
     AddressValidator,
     NameValidator,
     PhoneValidator,

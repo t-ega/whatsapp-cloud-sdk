@@ -11,11 +11,11 @@ from uvicorn import Config, Server
 from starlette.requests import Request
 from starlette.responses import Response
 
-from src.whatsapp_cloud_sdk._files.message import Message
+from whatsapp_cloud_sdk._files.message import Message
 
-from src.whatsapp_cloud_sdk._validators.server import Webhook
+from whatsapp_cloud_sdk._validators.server import Webhook
 
-from whatsapp_tega.bot import Bot
+from whatsapp_cloud_sdk.bot import Bot
 
 
 load_dotenv()

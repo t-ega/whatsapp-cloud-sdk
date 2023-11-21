@@ -5,11 +5,11 @@ from unicodedata import decimal
 import json
 import requests
 
-from src.whatsapp_cloud_sdk._exceptions.http_error import CustomHTTPError
-from src.whatsapp_cloud_sdk._base_api import _BaseApi
-from src.whatsapp_cloud_sdk._files.contact import Contact
-from src.whatsapp_cloud_sdk._utils.json_serializer import MyEncoder
-from src.whatsapp_cloud_sdk._validators.messages import (
+from whatsapp_cloud_sdk._exceptions.http_error import CustomHTTPError
+from whatsapp_cloud_sdk._base_api import _BaseApi
+from whatsapp_cloud_sdk._files.contact import Contact
+from whatsapp_cloud_sdk._utils.json_serializer import MyEncoder
+from whatsapp_cloud_sdk._validators.messages import (
     TextMessage,
     ButtonMessage,
     ButtonContents,
@@ -17,7 +17,7 @@ from src.whatsapp_cloud_sdk._validators.messages import (
     LocationMessage,
 )
 
-from src.whatsapp_cloud_sdk._formaters.message_formatter import MessageFormatter, LinkTypes
+from whatsapp_cloud_sdk._formaters.message_formatter import MessageFormatter, LinkTypes
 formatter = MessageFormatter()
 
 
